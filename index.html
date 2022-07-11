@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Coding Challenge</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
             font-size: large;
         }
-        .logo
-        {
+
+        .logo {
             width: 70px;
             height: 70px;
             background-color: rgba(213, 43, 43, 0.932);
@@ -25,72 +28,83 @@
             align-items: center;
             font-size: xx-large;
         }
-        nav{
+
+        nav {
             width: 100%;
             height: 70px;
             display: flex;
             justify-content: left;
         }
 
-        ul{
+        ul {
             margin-top: 20px;
             margin-left: 20px;
             width: 80%;
             display: flex;
             justify-content: left;
         }
-        li{
+
+        li {
             display: flex;
             justify-content: center;
             align-items: center;
-padding: 15px;
+            padding: 15px;
         }
-        a{
+
+        a {
             text-decoration: none;
             color: gray;
         }
-        a:hover{
+
+        a:hover {
             color: red;
         }
-        .banner{
+
+        .banner {
             height: 80vh;
             width: 100%;
             position: relative;
         }
-        img{
+
+        img {
             width: 100%;
             height: 100%;
         }
-        footer{
+
+        footer {
             height: 100px;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
         }
-        #btn{
+
+        #btn {
             width: 150px;
-position:fixed;
-top: 10px;
-right: 0px;
-color: red;
-padding: 10px;
-box-shadow: 1px 1px 3px gray;
-margin: 10px;
-display: flex;
-justify-content: center;
-align-items: center;
+            position: fixed;
+            top: 10px;
+            right: 0px;
+            color: red;
+            padding: 10px;
+            box-shadow: 1px 1px 3px gray;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        h1{
+
+        h1 {
             font-size: x-large;
         }
-        #dis{
-            position:absolute;
-            top:400px;
+
+        #dis {
+            position: absolute;
+            top: 400px;
             left: 170px;
             padding: 2px 20px;
         }
     </style>
 </head>
+
 <body>
     <nav id="nav">
         <div class="logo">R</div>
@@ -108,7 +122,9 @@ align-items: center;
         <img src="./banner.png" alt="banner">
         <button id="dis"><span style="color: red;">70% Off </span>for first 3 months</button>
     </div>
-    <a href="#"><div id="btn">Buy Rogan&nbsp; <i class="fa-solid fa-arrow-right-long"></i></div></a>
+    <a href="#">
+        <div id="btn">Buy Rogan&nbsp; <i class="fa-solid fa-arrow-right-long"></i></div>
+    </a>
     <footer>
         <h1 id="name"></h1>
         <h1 id="uro"></h1>
@@ -116,19 +132,19 @@ align-items: center;
         <h1 id="date"></h1>
     </footer>
     <script>
-        document.getElementById("name").textContent="Anikate Agrawal";
-        document.getElementById("uro").textContent="201500088";
-        document.getElementById("col").textContent="GLA University, Mathura";
-        window.onload=date;
-        function date(){
-            var d=new Date().toLocaleDateString();
-            var l=d.split("/");
-            var day=l[1] ,month=l[0],year=l[2];
-            if(day.length<2)day="0"+day;
-            if(month.length<2)month="0"+month;
-            var date=day+"-"+month+"-"+year;
-        document.getElementById("date").textContent=`${date}`;
+        document.getElementById("name").textContent = "Anikate Agrawal";
+        document.getElementById("uro").textContent = "201500088";
+        document.getElementById("col").textContent = "GLA University, Mathura";
+        window.onload = date;
+        function date() {
+            var d = new Date();
+            var day = "" + d.getDate(), month = "" + (d.getMonth() + 1), year = d.getFullYear();
+            if (day.length < 2) day = "0" + day;
+            if (month.length < 2) month = "0" + month;
+            var date = day + "-" + month + "-" + year;
+            document.getElementById("date").textContent = `${date}`;
         }
     </script>
 </body>
+
 </html>
